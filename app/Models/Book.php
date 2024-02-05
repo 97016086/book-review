@@ -22,10 +22,10 @@ class Book extends Model
     }
     public function scopePopular(Builder $query, $from  = null, $to = null ): Builder 
     {
-        return $query->withCount(['reviews' => fn (Builder  $q) =>  $this->dateRangeFilter($q, $from, $to)
-        {
+        return $query->withCount([
+          'reviews' =>  fn(Builder  $q) =>  $this->dateRangeFilter($q, $from, $to)  
+
         
-        }
       ])
       ->orderBy('reviews_count',  'desc');
     }
