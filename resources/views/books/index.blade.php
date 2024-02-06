@@ -15,9 +15,9 @@
       $filters  = [
         ''  =>  'Latest',
         'popular_last_month'  =>  'Popular Last Month',
-        'popular_last6_months'  =>  'Popular Last 6 Months',
+        'popular_last_6months'  =>  'Popular Last 6 Months',
         'highest_rated_last_month'  =>  'Highest Rated Last Month',
-        'higest_rated_last6_months'  =>  'Higest Rated Last 6 Months',
+        'higest_rated_last_6months'  =>  'Higest Rated Last 6 Months',
       ];
     @endphp
 
@@ -39,7 +39,7 @@
           class="flex flex-wrap items-center justify-between">
           <div class="w-full flex-grow sm:w-auto">
             <a href="{{ route('books.show', $book) }}" class="book-title">{{  $book->title }}</a>
-            <span class="book-author">by {{ $book->author }}/span>
+            <span class="book-author">by {{ $book->author }}</span>
           </div>
           <div>
             <div class="book-rating">
